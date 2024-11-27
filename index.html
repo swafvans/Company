@@ -17,7 +17,6 @@
         body {
             background-color: #f9f9f9;
         }
-
         /* Background SVG */
         #bg-wrap {
             position: fixed;
@@ -36,6 +35,7 @@
             top: 0;
             left: 0;
         }
+
 
         /* Header Section */
         header {
@@ -127,14 +127,14 @@
             color: #333;
             font-size: 1.2rem;
         }
-
-        /* Typing Animation for Intro Text */
-        .intro-text {
+        
+         /* Typing animation for each letter */
+         .intro-text {
             margin: 20px auto;
             text-align: center;
             font-size: 1.5rem;
             display: inline-block;
-            color: #333;
+            color: #fff;
         }
 
         .intro-text span {
@@ -154,6 +154,12 @@
                 text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
             }
         }
+       
+
+        /*bg animate*/
+        
+
+        
 
         /* Product Grid */
         .recent-view {
@@ -245,9 +251,8 @@
             </div>
         </div>
     </header>
-
     <!-- Introduction Text -->
-    <div class="intro-text">
+    <div class="intro-text" style="text-align: center; margin: 20px 0; font-size: 1.2rem; color: #333;">
         <p>A trusted company specializing in premium Islamic clothing, educational textbooks, concise study guides, and historical literature, tailored to meet the needs of students, scholars, and fashion enthusiasts alike.</p>
     </div>
 
@@ -272,4 +277,109 @@
                 </a>
                 <div class="product-info">
                     <h3>White Qamees</h3>
-                    <p class="price">₹3,649 <span class="
+                    <p class="price">₹3,649 <span class="old-price">₹3,900</span></p>
+                    View Product
+                </div>
+            </div>
+            <div class="product-item">
+                <a href="./product2.html">
+                <img src="./qms22.webp" alt="Product Image 2">
+                </a>
+                <div class="product-info">
+                    <h3>Color Qameess</h3>
+                    <p class="price">₹4,800 <span class="old-price">₹5,999</span></p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200" alt="Product Image 3">
+                <div class="product-info">
+                    <h3>White Gown</h3>
+                    <p class="price">₹12,000 <span class="old-price">₹14,500</span></p>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200" alt="Product Image 3">
+                <div class="product-info">
+                    <h3>White Gown</h3>
+                    <p class="price">₹12,000 <span class="old-price">₹14,500</span></p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200" alt="Product Image 3">
+                <div class="product-info">
+                    <h3>White Gown</h3>
+                    <p class="price">₹12,000 <span class="old-price">₹14,500</span></p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/200" alt="Product Image 3">
+                <div class="product-info">
+                    <h3>White Gown</h3>
+                    <p class="price">₹12,000 <span class="old-price">₹14,500</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Discover the latest trends from small shops</p>
+    </footer>
+
+    <!-- JavaScript for Autocomplete Search -->
+    <script>
+        let availableKeywords = [
+            'silk',
+            'css',
+            'javascript',
+            'html',
+            'bootstrap',
+            'jquery',
+            'ajax',
+        ];
+
+        const resultBox = document.querySelector(".result-box");
+        const inputBox = document.getElementById("input-box");
+
+        inputBox.onkeyup = function () {
+            let result = [];
+            let input = inputBox.value;
+            if (input.length) {
+                result = availableKeywords.filter((keyword) => {
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+                display(result);
+            } else {
+                resultBox.innerHTML = ""; // Clear the result box if input is empty
+            }
+        }
+
+        function display(result) {
+            const content = result.map((list) => {
+                return <li onclick="selectInput(this)">${list}</li>;
+            }).join(''); // Use join to combine all the list items into a single string
+
+            resultBox.innerHTML = <ul>${content}</ul>;
+        }
+
+        function selectInput(list) {
+            inputBox.value = list.innerText;
+            resultBox.innerHTML = ""; // Clear the result box once an item is selected
+        }
+    </script>
+    <script>
+        const introText = "Welcome to the Shop!";
+        const introElement = document.getElementById('introText');
+
+        // Loop through each character, wrap in a span, and apply staggered animation
+        introText.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.animationDelay = ${index * 0.1}s; // Delay each letter animation
+            introElement.appendChild(span);
+        }); 
+    </script>
+
+</body>
+</html>  
