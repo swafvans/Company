@@ -143,6 +143,18 @@
             cursor: pointer;
         }
 
+        /* Google Pay Button */
+        .gpay-button {
+            background-color: #4285F4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+
         /* Description */
         .product-description {
             margin-top: 20px;
@@ -200,6 +212,8 @@
             <!-- Add to Cart Button -->
             <button class="add-to-cart">Add to Cart</button>
             <a href="#" class="shop-pay-button">Buy with Shop Pay</a>
+            <!-- Google Pay Button -->
+            <a href="#" class="gpay-button" id="google-pay-button">Buy with Google Pay</a>
             <p class="payment-options">More payment options</p>
 
             <!-- Product Description -->
@@ -261,14 +275,21 @@
             option.addEventListener('click', function() {
                 sizeOptions.forEach(opt => opt.classList.remove('active'));
                 this.classList.add('active');
-                
-                // Redirect based on size selection
+
+                // Redirect user to a different page for small and large sizes
                 if (this.id === 'smallSize') {
-                    window.location.href = 'smallProduct.html'; // Redirect to small product page
+                    window.location.href = 'https://example.com/small-size'; // Redirect to small size page
                 } else if (this.id === 'largeSize') {
-                    window.location.href = 'largeProduct.html'; // Redirect to large product page
+                    window.location.href = 'https://example.com/large-size'; // Redirect to large size page
                 }
             });
+        });
+
+        // Add Google Pay Button
+        document.getElementById('google-pay-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            // Integrate your Google Pay API here
+            alert("Google Pay functionality will be integrated here.");
         });
     </script>
 
