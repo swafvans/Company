@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop</title>
+  <title>Product Detail</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,19 +17,14 @@
       </ul>
     </nav>
   </header>
-  <div class="shop-container">
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search products...">
+
+  <div class="container">
+    <div class="image-gallery" id="imageGallery"></div>
+    <div class="main-image">
+      <img id="mainMedia" src="" alt="Main Media">
+      <video id="mainVideo" style="display:none;" muted autoplay loop></video>
     </div>
-    <h2>Our Products</h2>
-    <div class="product-grid" id="productGrid"></div>
-  </div>
-  <div class="message-form">
-    <h3>Send a Message</h3>
-    <form id="messageForm">
-      <textarea id="message" placeholder="Enter your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div class="product-details" id="productDetails"></div>
   </div>
   <script src="script.js"></script>
 </body>
