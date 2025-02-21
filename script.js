@@ -87,7 +87,7 @@ async function loadInitialProducts() {
     saveProducts(data);
   } catch (error) {
     console.error('Error loading products:', error);
-    saveProducts([]); // Fallback to empty array
+    saveProducts([]);
   }
 }
 
@@ -227,7 +227,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const newProducts = getProducts();
       newProducts.push(product);
       saveProducts(newProducts);
-      alert('Product added! To make it permanent, update products.json and push to GitHub.');
+      console.log('New Product Added:', product); // Log for manual update
+      alert('Product added! To make it permanent, copy the console log and update products.json, then push to GitHub.');
       this.reset();
       loadProductsSection();
     });
