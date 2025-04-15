@@ -1,7 +1,0 @@
-shop-site/
-├── index.html        # Homepage with search and messaging
-├── product.html      # Product detail page with payment options
-├── admin.html        # Admin dashboard for managing products
-├── style.css         # Shared styling
-├── script.js         # Shared JavaScript logic
-├── products.json     # Static product data
