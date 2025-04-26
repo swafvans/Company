@@ -1,0 +1,30 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "A backend server built using Node.js and Express for Suuq Essentials",
+  "main": "Node.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://swafvans.github.io/Company/"
+  },
+  "keywords": [
+    "ecommerce",
+    "backend",
+    "express",
+    "nodejs",
+    "suuq",
+    "dress",
+    "shop",
+    "api",
+    "shopping"
+  ],
+  "author": "Muhammad Safvan S. <muhammadsafvan313@gmail.com.com> (https://github.com/swafvans)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase-admin": "^13.3.0"
+  }
+}
